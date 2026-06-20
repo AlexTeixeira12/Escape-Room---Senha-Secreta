@@ -1,39 +1,32 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+# Escape Room - Senha Secreta
 
-int main() {
-    int senha, tentativa, tentativas = 0;
+## Descrição
+Você está preso em uma sala misteriosa e precisa descobrir a senha correta para abrir a porta e escapar.
 
-    srand(time(NULL));
-    senha = rand() % 100 + 1;
+## Como Jogar
+- O sistema gera uma senha aleatória entre 1 e 100.
+- O jogador deve tentar adivinhar a senha.
+- O sistema informa se o número digitado é maior ou menor que a senha.
+- O jogo termina quando a senha for descoberta.
 
-    printf("====================================\n");
-    printf("   ESCAPE ROOM - SENHA SECRETA\n");
-    printf("====================================\n");
-    printf("Voce esta preso em uma sala!\n");
-    printf("Descubra a senha entre 1 e 100 para escapar.\n\n");
+## Tecnologias Utilizadas
+- Linguagem C
+- Dev-C++
+- GitHub
 
-    do {
-        printf("Digite sua tentativa: ");
-        scanf("%d", &tentativa);
+## Como Executar
+1. Abra o arquivo no Dev-C++.
+2. Compile o programa.
+3. Execute o programa.
+4. Digite suas tentativas até descobrir a senha.
 
-        tentativas++;
+## Exemplo
 
-        if (tentativa > senha) {
-            printf("Muito alto!\n\n");
-        }
-        else if (tentativa < senha) {
-            printf("Muito baixo!\n\n");
-        }
-        else {
-            printf("\nPARABENS!\n");
-            printf("Voce descobriu a senha secreta!\n");
-            printf("Tentativas realizadas: %d\n", tentativas);
-            printf("A porta foi desbloqueada.\n");
-        }
+Digite sua tentativa: 50
+Muito baixo!
 
-    } while (tentativa != senha);
+Digite sua tentativa: 75
+Muito alto!
 
-    return 0;
-}
+Digite sua tentativa: 63
+Parabéns! Você descobriu a senha secreta!
